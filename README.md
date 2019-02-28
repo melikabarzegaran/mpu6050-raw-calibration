@@ -3,7 +3,8 @@ Taking the steps below, you can calibrate your MPU-6050 module.
 
 ## Step 1
 Wire your MPU-6050 module to an Arduino as shown in the wiring diagram as below.
-![](diagram/mpu6050-raw-calibration_bb.jpg)
+<br><br><br>
+![diagram](diagram/mpu6050-raw-calibration_bb.jpg)
 
 ## Step 2
 Run the sketch.
