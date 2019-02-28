@@ -1,5 +1,5 @@
 # MPU-6050 Calibration with Arduino
-Taking the steps below, you can calibrate your MPU-6050 module.
+Taking the steps below, you can calibrate your MPU-6050.
 
 ## Step 1
 Wire your MPU-6050 module to an Arduino as shown in the wiring diagram as below.
