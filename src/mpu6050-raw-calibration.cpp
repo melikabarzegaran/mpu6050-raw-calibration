@@ -20,7 +20,7 @@
 
 /*
  * title:
- *      MPU-6050 calibration
+ *      MPU-6050 calibration with Arduino
  *
  * description:
  *      Returns calibration offsets for x, y, and z axes of MPU-6050 built-in accelerometer and gyroscope.
