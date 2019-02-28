@@ -19,6 +19,56 @@
  */
 
 /*
+ * title:
+ *      MPU-6050 calibration
+ *
+ * description:
+ *      Returns calibration offsets for x, y, and z axes of MPU-6050 built-in accelerometer and gyroscope.
+ *
+ *      These offsets were meant to calibrate MPU-6050's internal Digital Motion Processor (DMP), but they can be
+ *      also useful for reading data from sensors.
+ *
+ *      The effect of temperature has not been taken into account. It is not guaranteed that it'll work if is
+ *      calibrated indoors and used outdoors. Best is to calibrate and use at the same temperature.
+ *
+ *      This is a highly-edited version of MPU-6050 calibration sketch written by Luis Ródenas. It uses MPU-6050
+ *      library, written by Jeff Rowberg. That MPU-6050 library, uses the I2C serial communication protocol library,
+ *      which is also written by Jeff Rowberg. Finally, the I2C serial communication protocol library uses the official
+ *      Arduino I2C library, called Wire.
+ *
+ *      The MPU-6050 calibration sketch, written by Luis Ródenas, was originally posted here:
+ *          https://www.i2cdevlib.com/forums/topic/96-arduino-sketch-to-automatically-calculate-mpu6050-offsets/
+ *
+ *      The link to the source code of MPU-6050 library, written by Jeff Rowberg, is here:
+ *          https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
+ *
+ *      The link to the source code of I2C serial protocol library, also written by Jeff Rowberg, is here:
+ *          https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/I2Cdev
+ *
+ *      The reference to the official Arduino I2C library, called Wire, can be found here:
+ *          https://www.arduino.cc/en/reference/wire
+ *
+ * configuration:
+ *      +-----------------------+----------------------------+
+ *      | Arduino Uno board pin | GY-521 break-out board pin |
+ *      +-----------------------+----------------------------+
+ *      |          VCC          |             VCC            |
+ *      +-----------------------+----------------------------+
+ *      |          GND          |             GND            |
+ *      +-----------------------+----------------------------+
+ *      |           A5          |             SCL            |
+ *      +-----------------------+----------------------------+
+ *      |           A4          |             SDA            |
+ *      +-----------------------+----------------------------+
+ *
+ * author:
+ *      Melika Barzegaran <melika.barzegaran.hosseini@gmail.com>
+ *
+ * version:
+ *      1.0.0
+ */
+
+/*
  * Add MPU-6050 library, written by Jeff Rowberg <jeff@rowberg.net>.
  * Link to the library: https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
  */
@@ -220,8 +270,8 @@ void setupUartSerialCommunicationProtocol() {
      * +-------+------+------+
      *
      * Set baud rate to 38400 bps. 38400 bps is chosen because the baud rate for UART serial communication protocol
-     * in calibration script be the same as other scripts. This way, there will be no need to change the baud rate
-     * in serial monitor when navigating between scripts.
+     * in calibration sketch be the same as other sketches. This way, there will be no need to change the baud rate
+     * in serial monitor when navigating between sketches.
      */
     Serial.begin(38400);
 }
