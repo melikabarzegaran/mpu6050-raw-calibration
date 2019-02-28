@@ -134,34 +134,34 @@ const int GYROSCOPE_STEP = 3;
  * The goal values for all sensors in each axes are 0, except for z axis of accelerometer. The goal value for z
  * axis of accelerometer is 16384, meaning +1 g, indicating the object is under gravity.
  */
-const int ACCELEROMETER_X_GOAL = 0;
-const int ACCELEROMETER_Y_GOAL = 0;
-const int ACCELEROMETER_Z_GOAL = 16384;
-const int GYROSCOPE_X_GOAL = 0;
-const int GYROSCOPE_Y_GOAL = 0;
-const int GYROSCOPE_Z_GOAL = 0;
+const int16_t ACCELEROMETER_X_GOAL = 0;
+const int16_t ACCELEROMETER_Y_GOAL = 0;
+const int16_t ACCELEROMETER_Z_GOAL = 16384;
+const int16_t GYROSCOPE_X_GOAL = 0;
+const int16_t GYROSCOPE_Y_GOAL = 0;
+const int16_t GYROSCOPE_Z_GOAL = 0;
 
 /*
  * The average value of each sensor in each axis.
  * Default values are set to max int.
  */
-int accelerometerXAverage = INT16_MAX;
-int accelerometerYAverage = INT16_MAX;
-int accelerometerZAverage = INT16_MAX;
-int gyroscopeXAverage = INT16_MAX;
-int gyroscopeYAverage = INT16_MAX;
-int gyroscopeZAverage = INT16_MAX;
+int16_t accelerometerXAverage = INT16_MAX;
+int16_t accelerometerYAverage = INT16_MAX;
+int16_t accelerometerZAverage = INT16_MAX;
+int16_t gyroscopeXAverage = INT16_MAX;
+int16_t gyroscopeYAverage = INT16_MAX;
+int16_t gyroscopeZAverage = INT16_MAX;
 
 /*
  * The calibration offsets of each sensor in each axis.
  * Default values are set to 0.
  */
-int accelerometerXOffset = 0;
-int accelerometerYOffset = 0;
-int accelerometerZOffset = 0;
-int gyroscopeXOffset = 0;
-int gyroscopeYOffset = 0;
-int gyroscopeZOffset = 0;
+int16_t accelerometerXOffset = 0;
+int16_t accelerometerYOffset = 0;
+int16_t accelerometerZOffset = 0;
+int16_t gyroscopeXOffset = 0;
+int16_t gyroscopeYOffset = 0;
+int16_t gyroscopeZOffset = 0;
 
 void setupUartSerialCommunicationProtocol();
 
