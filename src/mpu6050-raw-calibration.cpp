@@ -281,7 +281,7 @@ void setupI2cSerialCommunicationProtocol() {
      * Setup I2C serial communication protocol.
      *
      * Set clock Frequency of I2C serial communication protocol to the default value, which is the standard mode
-     * (100 KHz). To set the clock frequency to the fast mode (400 KHz) use the code below:
+     * (100 KHz). To set the clock frequency to the fast mode (400 KHz), use the code below:
      *
      * ```
      * Wire.setClock(400000);
@@ -303,7 +303,7 @@ void setClockSource() {
      * +--------+---------------------------------------------------------+
      * | CLKSEL |                       clock source                      |
      * +--------+---------------------------------------------------------+
-     * |    0   |                 internal 8MHz oscillator                |
+     * |    0   |                internal 8 MHz oscillator                |
      * +--------+---------------------------------------------------------+
      * |    1   |           PLL with x axis gyroscope reference           | <- selected
      * +--------+---------------------------------------------------------+
